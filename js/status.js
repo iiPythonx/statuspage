@@ -8,7 +8,6 @@ const services = [
     { name: "CubeRPC Album Art", url: "albumart.iipython.cf", description: "Album art storage server for CubeRPC." },
     { name: "Weather Archiver", url: "weather.iipython.cf", description: "Project to archive weather data every 10 minutes." },
     { name: "Snippets Site", url: "quirks.iipython.cf", description: "Random HTML snippets and things." },
-    { name: "Down Site", url: "down.iipython.cf", description: "Manual site that I use for maintenance." },
     { name: "Status Site", url: "status.iipython.cf", description: "This site, hosted by Github Pages." }
 ];
 const formatter = new Intl.DateTimeFormat("en-US", { month: "long" });
@@ -34,7 +33,6 @@ function updateServices() {
         function update(ping, text) {
             if (ping > 5000) text = "slow";
             let result = element.find("p.result");
-            console.log(result, element);
             result.text(`${text.toUpperCase()} (${Math.round(ping, 2)}ms)`);
             element.find("div.si").attr("class", `si si-${text}`);
         }
