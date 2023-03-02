@@ -30,6 +30,7 @@ div.service {
     margin-top: 20px;
     margin-bottom: 10px;
     width: calc(100% - 65px);
+    cursor: pointer;
     padding: 10px;
     padding-left: 15px;
     padding-bottom: 5px;
@@ -63,6 +64,12 @@ div.si {
     left: -18px;
     float: right;
 }
-div.si-online {
+div.si-up {
     background-color: #28a745;
+}
+div.si-down {
+    background-color: #dc3545;
+}
+div.si-slow {
+    background-color: #ffc107;
 }
