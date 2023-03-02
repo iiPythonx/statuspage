@@ -20,6 +20,31 @@
         <div id = "header">
             <h1>iiPython System Status</h1>
             <h3>March 1st 2023, 5:37 PM CST</h3>
+            <hr>
+            <br>
+            <md>
+# Welcome
+
+Welcome to the iiPython system status page.  
+This site tracks the status of my publicly hosted webpages to notify you of any outages and or
+slow ping times. Normally, my sites won't go down unless I have a severe storm or am performing
+maintenance.
+
+# Reliability
+
+In order to ensure that my status page is online 24/7, I decided to build this as a client-side app
+hosted by [Github Pages](https://pages.github.com/) rather then a full website that I host. What's the point of hosting a status
+page if it goes down the moment I lose power? Exactly, there isn't one.  
+
+However, since this is **client-sided**, ping times will depend on **your** location, and will report
+my servers as down if [Cloudflare](https://cloudflare.com/) has an outage or my DNS records stop resolving for any reason.
+
+# Contact
+
+Odds are, if this page reports an outage, then I'm probably experiencing an outage. **HOWEVER**, if you feel that this page is
+incorrectly saying that my services are up/down when in fact they aren't, please contact me at [ben@iipython.cf](mailto:ben@iipython.cf) or on
+Discord at [iiPython#0768](https://discord.com/users/633185043774177280).
+            </md>
         </div>
         <div id = "status">
             <div class = "service">
@@ -89,7 +114,10 @@
         </div>
 
         <!-- JS -->
+        <script src = "https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+        <script src = "https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script> 
         <script src = "https://code.jquery.com/jquery-3.6.3.min.js" integrity = "sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin = "anonymous"></script>
         <script src = "js/status.js" ></script>
+        <script>renderMarkdown();</script>
     </body>
 </html>
