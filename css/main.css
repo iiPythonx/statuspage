@@ -73,11 +73,11 @@ div.si-down {
 div.si-slow {
     background-color: #ffc107;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1400px) {
     div#header {
         top: 0px;
-        left: 10px;
-        width: calc(100% - 20px);
+        left: 20px;
+        width: calc(100% - 40px);
         position: relative;
     }
     div#status {
@@ -87,5 +87,17 @@ div.si-slow {
         width: 90%;
         height: fit-content;
         position: relative;
+    }
+    div.service .title {
+        font-size: 30px;
+    }
+    div.response p {
+        font-size: 30px;
+    }
+    div.si {
+        top: calc(50% + 2px);
+        left: -25px;
+        width: 15px;
+        height: 15px;
     }
 } 
