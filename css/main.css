@@ -1,0 +1,67 @@
+html {
+    color: #fefefe;
+    background-color: #121212;
+    font-family: "Source Sans Pro", "Open Sans", "Roboto", sans-serif;
+}
+div#header {
+    top: 20px;
+    left: 30px;
+    position: absolute;
+}
+div#header h1 {
+    margin-bottom: 5px;
+}   
+div#header h3 {
+    margin-top: 0px;
+}
+div#status {
+    top: 20px;
+    right: 30px;
+    width: 400px;
+    height: calc(100% - 40px);
+    position: absolute;
+    background-color: #202020;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+div.service {
+    left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: calc(100% - 65px);
+    padding: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #121212;
+}
+div.service div.response {
+    top: 15px;
+    right: 15px;
+    width: fit-content;
+    position: absolute;
+    height: fit-content;
+}
+div.service .title {
+    height: 21px;
+    margin-top: 5px;
+}
+div.response p {
+    float: right;
+    margin: 0px;
+    height: 21px;
+    width: fit-content;
+}
+div.si {
+    width: 10px;
+    height: 10px;
+    border-radius: 45px;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -18px;
+    float: right;
+}
+div.si-online {
+    background-color: #28a745;
+}
