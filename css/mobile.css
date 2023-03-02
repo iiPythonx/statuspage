@@ -1,0 +1,16 @@
+@import url("includes/list.css") only screen and (max-width: 900px);
+@import url("includes/list.css") only screen and (pointer:coarse);
+@media (pointer:coarse) {
+    div.service .title {
+        font-size: 30px;
+    }
+    div.response p {
+        font-size: 30px;
+    }
+    div.si {
+        top: calc(50% + 2px);
+        left: -25px;
+        width: 15px;
+        height: 15px;
+    }
+}

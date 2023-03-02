@@ -1,0 +1,21 @@
+div#header {
+    top: 0px;
+    left: 20px;
+    width: calc(100% - 40px);
+    position: relative;
+}
+div#status {
+    left: 5%;
+    top: 25px;
+    right: 0px;
+    width: 90%;
+    margin-bottom: 20px;
+    height: fit-content;
+    position: relative;
+}
+div#status div.service:last-child {
+    margin-bottom: 20px;
+}
+#status-break {
+    display: inline;
+}
