@@ -73,3 +73,19 @@ div.si-down {
 div.si-slow {
     background-color: #ffc107;
 }
+@media screen and (max-width: 900px) {
+    div#header {
+        top: 0px;
+        left: 10px;
+        width: calc(100% - 20px);
+        position: relative;
+    }
+    div#status {
+        left: 5%;
+        top: 25px;
+        right: 0px;
+        width: 90%;
+        height: fit-content;
+        position: relative;
+    }
+} 
