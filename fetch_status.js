@@ -1,19 +1,19 @@
 // Copyright (c) 2024 iiPython
 
 const services = [
-    { name: "iiPython Front Page", url: "https://iipython.dev" },
-    { name: "Geesecraft Archives", url: "https://gc.iipython.dev" },
-    { name: "Public CDN", url: "https://cdn.iipython.dev" },
-    { name: "Consumet API", url: "https://anisq.iipython.dev" },
-    { name: "File Sharing", url: "https://files.iipython.dev" },
-    { name: "Local Network", url: "https://lan.iipython.dev" },
-    { name: "Codelet", url: "https://codelet.codes" },
-    { name: "Inventory Service", url: "https://inv.codelet.codes" },
+    { expect: 404, name: "iiPython Front Page", url: "https://iipython.dev" },
+    { expect: 404, name: "Geesecraft Archives", url: "https://gc.iipython.dev" },
+    { expect: 404, name: "Public CDN", url: "https://cdn.iipython.dev" },
+    { expect: 404, name: "Consumet API", url: "https://anisq.iipython.dev" },
+    { expect: 404, name: "File Sharing", url: "https://files.iipython.dev" },
+    { expect: 404, name: "Local Network", url: "https://lan.iipython.dev" },
+    { expect: 404, name: "Codelet", url: "https://codelet.codes" },
+    { expect: 404, name: "Inventory Service", url: "https://inv.codelet.codes" },
 ];
 
 async function fetch_status() {
     const slice = { time: Date.now() / 1000 | 0, services: {} };
-    for (let { name, url } of services) {
+    for (let { expect, name, url } of services) {
 
         // Make request
         const control = new AbortController();
@@ -21,7 +21,7 @@ async function fetch_status() {
 
         try {
             const start = performance.now()
-            const up = (await fetch(`${url}/_statuscheck/${slice.time}`, { redirect: "manual" })).status === 404;
+            const up = (await fetch(`${url}/_statuscheck/${slice.time}`, { redirect: "manual" })).status === expect;
             clearTimeout(timeout);
             slice.services[name] = up ? Math.round(performance.now() - start) : 0;
 
