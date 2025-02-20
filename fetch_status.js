@@ -1,11 +1,11 @@
-// Copyright (c) 2024 iiPython
+// Copyright (c) 2024-2025 iiPython
 
 const services = [
     { expect: 404, name: "iiPython Front Page", url: "https://iipython.dev" },
     { expect: 404, name: "Geesecraft Archives", url: "https://gc.iipython.dev" },
     { expect: 404, name: "Public CDN", url: "https://cdn.iipython.dev" },
     { expect: 200, name: "Consumet API", url: "https://anisq.iipython.dev" },
-    { expect: 404, name: "File Sharing", url: "https://files.iipython.dev" },
+    { expect: 400, name: "Remote API", url: "https://remote.iipython.dev" },
     { expect: 404, name: "Local Network", url: "https://lan.iipython.dev" }
 ];
 
